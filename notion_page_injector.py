@@ -52,3 +52,6 @@ def generate_summary_file(url: str):
                 title = str("* [{}](markdowns/{}.md)\n".format(title, title.replace(" ", "%20")))
                 output.write(title)
 
+
+inject_multiple_pages_by_url("Input your notion page url here")
+inject_single_page_by_url("Input your notion page url here")
