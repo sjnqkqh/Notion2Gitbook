@@ -53,5 +53,13 @@ def generate_summary_file(url: str):
                 output.write(title)
 
 
-inject_multiple_pages_by_url("Input your notion page url here")
-inject_single_page_by_url("Input your notion page url here")
+print("Type M to convert a page containing multiple documents, or S to convert a single document.")
+input_type = input().upper()
+if input_type == "M" or input_type == 'ㅡ':
+    print("Enter the URL of the page containing multiple documents.")
+    url = input().split("?")[0]
+    inject_multiple_pages_by_url(url)
+elif input_type == "S" or input_type == 'ㄴ':
+    print("Enter the URL of the page containing single documents.")
+    url = input().split("?")[0]
+    inject_single_page_by_url(url)
