@@ -8,6 +8,8 @@ def text_link(item: dict):
 
 # Annotations
 def bold(content: str):
+    if content.split(" ")[-1] == "":
+        return f"**{content[:-1]}** "
     return f"**{content}**"
 
 
