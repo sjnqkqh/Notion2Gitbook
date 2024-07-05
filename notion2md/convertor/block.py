@@ -258,10 +258,10 @@ def image(info: dict) -> str:
     info['file_path'] = "./assets/" + info['file_path']
     if info["caption"]:
         return (
-            f"![{info['file_name']}]({info['file_path']})\n\n{info['caption']}"
+            f"![{info['caption']}]({info['file_path']})"
         )
     else:
-        return f"![{info['file_name']}]({info['file_path']})"
+        return f"![]({info['file_path']})"
 
 
 def file(info: dict) -> str:
